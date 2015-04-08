@@ -22,7 +22,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=PERLANCAR-File-HomeDir
   homepage: https://metacpan.org/release/PERLANCAR-File-HomeDir
   repository: git://github.com/perlancar/perl-PERLANCAR-File-HomeDir.git
-version: '0.01'
+version: '0.02'
 x_Dist_Zilla:
   perl:
     version: '5.018001'
@@ -188,10 +188,6 @@ x_Dist_Zilla:
               name: FUNCTIONS
               version: '4.011'
             -
-              class: Pod::Weaver::Plugin::Rinci
-              name: '@Author::PERLANCAR/Rinci'
-              version: '0.33'
-            -
               class: Pod::Weaver::Section::Leftovers
               name: '@Author::PERLANCAR/Leftovers'
               version: '4.011'
@@ -214,15 +210,15 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::Homepage::DefaultCPAN
               name: '@Author::PERLANCAR/Homepage::DefaultCPAN'
-              version: '0.04'
+              version: '0.05'
             -
               class: Pod::Weaver::Section::Source::DefaultGitHub
               name: '@Author::PERLANCAR/Source::DefaultGitHub'
-              version: '0.06'
+              version: '0.07'
             -
               class: Pod::Weaver::Section::Bugs::DefaultRT
               name: '@Author::PERLANCAR/Bugs::DefaultRT'
-              version: '0.04'
+              version: '0.05'
             -
               class: Pod::Weaver::Section::Authors
               name: '@Author::PERLANCAR/Authors'
@@ -231,6 +227,14 @@ x_Dist_Zilla:
               class: Pod::Weaver::Section::Legal
               name: '@Author::PERLANCAR/Legal'
               version: '4.011'
+            -
+              class: Pod::Weaver::Plugin::Rinci
+              name: '@Author::PERLANCAR/Rinci'
+              version: '0.38'
+            -
+              class: Pod::Weaver::Plugin::AppendPrepend
+              name: '@Author::PERLANCAR/AppendPrepend'
+              version: '0.01'
             -
               class: Pod::Weaver::Plugin::EnsureUniqueSections
               name: '@Author::PERLANCAR/EnsureUniqueSections'
@@ -252,7 +256,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Rinci::AddPrereqs
       name: '@Author::PERLANCAR/Rinci::AddPrereqs'
-      version: '0.05'
+      version: '0.06'
     -
       class: Dist::Zilla::Plugin::Rinci::Validate
       name: '@Author::PERLANCAR/Rinci::Validate'

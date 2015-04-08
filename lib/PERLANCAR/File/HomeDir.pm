@@ -1,7 +1,7 @@
 package PERLANCAR::File::HomeDir;
 
-our $DATE = '2015-04-01'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $DATE = '2015-04-08'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
@@ -16,7 +16,7 @@ our $DIE_ON_FAILURE = 0;
 
 # borrowed from File::HomeDir, with some modifications
 sub get_my_home_dir {
-    if ($^O eq 'Win32') {
+    if ($^O eq 'MSWin32') {
         # File::HomeDir always uses exists($ENV{x}) first, does it want to avoid
         # accidentally creating env vars?
         return $ENV{HOME} if $ENV{HOME};
@@ -51,7 +51,7 @@ PERLANCAR::File::HomeDir - Lightweight way to get current user's home directory
 
 =head1 VERSION
 
-This document describes version 0.01 of PERLANCAR::File::HomeDir (from Perl distribution PERLANCAR-File-HomeDir), released on 2015-04-01.
+This document describes version 0.02 of PERLANCAR::File::HomeDir (from Perl distribution PERLANCAR-File-HomeDir), released on 2015-04-08.
 
 =head1 SYNOPSIS
 
@@ -87,15 +87,20 @@ L<File::HomeDir>
 
 =head1 HOMEPAGE
 
-Please visit the project's homepage at L<https://metacpan.org/release/PERLANCAR-File-HomeDir>.=head1 SOURCE
+Please visit the project's homepage at L<https://metacpan.org/release/PERLANCAR-File-HomeDir>.
 
-Source repository is at L<https://github.com/perlancar/perl-PERLANCAR-File-HomeDir>.=head1 BUGS
+=head1 SOURCE
+
+Source repository is at L<https://github.com/perlancar/perl-PERLANCAR-File-HomeDir>.
+
+=head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website L<https://rt.cpan.org/Public/Dist/Display.html?Name=PERLANCAR-File-HomeDir>
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
+
 =head1 AUTHOR
 
 perlancar <perlancar@cpan.org>
